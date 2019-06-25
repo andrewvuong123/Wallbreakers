@@ -22,3 +22,19 @@ class Solution(object):
                 h_dist += 1
             
         return h_dist
+
+class Solution_2(object):
+    def hammingDistance_2(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        xor = x ^ y 
+        bin_num = bin(xor)
+        bin_len = len(bin_num)
+        h_dist = 0
+        for i in range(bin_len):
+            if bin_num[i] == "1":
+                h_dist += 1
+        return h_dist
